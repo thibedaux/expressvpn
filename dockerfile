@@ -4,7 +4,7 @@ Container based on polkaned/expressvpn version. This is my attempt mostly to lea
 ExpressVPN version: expressvpn_3.7.0.29-1_amd64.deb
 
 Download
-docker pull misioslav/expressvpn
+docker pull Thibedaux/expressvpn
 
 Start the container
     docker run \
@@ -20,7 +20,7 @@ Start the container
 	  --env=DDNS=domain \ #optional
 	  --env=IP=yourIP \ #optional
 	  --env=BEARER=ipinfo_access_token \ #optional
-    misioslav/expressvpn \
+    Thibedaux/expressvpn \
     /bin/bash
 Another container that will use ExpressVPN network:
 
@@ -37,7 +37,7 @@ Docker Compose
 	  - expressvpn
 
   expressvpn:
-    image: misioslav/expressvpn:latest
+    image: Thibedaux/expressvpn:latest
     container_name: expressvpn
     restart: unless-stopped
     ports: # ports from which container that uses expressvpn connection will be available in local network
